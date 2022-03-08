@@ -1,3 +1,3 @@
 ﻿using BAI;
 
-Les2.calcMinDist();
+Les3.run();
