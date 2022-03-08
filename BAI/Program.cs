@@ -1,3 +1,3 @@
 ﻿using BAI;
 
-Les3.run();
+Les3.run2();
