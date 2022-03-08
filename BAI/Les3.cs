@@ -21,7 +21,7 @@ namespace BAI
             init();
 
 
-            foreach(char l in sentance)
+            foreach (char l in sentance)
             {
                 if (OpeningBrackets.Contains(l))
                 {
@@ -30,9 +30,9 @@ namespace BAI
 
                 else if (CloseBrackets.Contains(l))
                 {
-                    if(stack.Count > 0)
+                    if (stack.Count > 0)
                     {
-                        if(stack.Peek() == OpeningBrackets[Array.IndexOf(CloseBrackets, l)])
+                        if (stack.Peek() == OpeningBrackets[Array.IndexOf(CloseBrackets, l)])
                         {
                             stack.Pop();
                         }
@@ -47,7 +47,14 @@ namespace BAI
                     }
                 }
             }
-            Console.WriteLine("Good");
+            if (stack.Count != 0)
+            {
+                Console.WriteLine("BAD");
+            }
+            else
+            {
+                Console.WriteLine("Good");
+            }
         }
     }
 }
